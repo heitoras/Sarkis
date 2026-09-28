@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Loja Sarkis</title>
+  <meta name="description" content="Compre o Sarkis no tamanho certo: do Mini de 10 cm ao Gigante de 80 cm.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400..700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="pular" href="#loja">Pular para a loja</a>
+
+  <header class="topo" id="topo">
+    <div class="envelope topo__interno">
+      <a class="logo" href="#inicio">Sarkis</a>
+      <nav class="menu" aria-label="Principal">
+        <a href="#loja">Tamanhos e preços</a>
+        <a href="#como-comprar">Como comprar</a>
+        <a href="#duvidas">Dúvidas</a>
+      </nav>
+      <button class="botao-carrinho" type="button" id="abrir-carrinho" aria-controls="carrinho" aria-expanded="false" aria-label="Abrir carrinho, 0 itens">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5.5 8h13l-1.1 12.2a1 1 0 0 1-1 .8H7.6a1 1 0 0 1-1-.8L5.5 8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 10V6.5a3 3 0 0 1 6 0V10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span class="botao-carrinho__texto">Carrinho</span>
+        <span class="contador" id="contador-carrinho">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="envelope hero__grade">
+        <div class="hero__texto">
+          <p class="sobretitulo" data-texto="siglas">Tamanhos PP · P · M · G · GG</p>
+          <h1 class="marca-grande">
+            <span class="sr">Sarkis</span>
+            <span class="marca-grande__letras" aria-hidden="true"><span>S</span><span>A</span><span>R</span><span>K</span><span>I</span><span>S</span></span>
+          </h1>
+          <p class="lead">Do <strong data-texto="menor">Mini de 10 cm</strong> ao <strong data-texto="maior">Gigante de 80 cm</strong>. Escolha o Sarkis do tamanho que cabe no seu espaço.</p>
+          <div class="hero__acoes">
+            <a class="botao botao--escuro" href="#loja">Ver tamanhos e preços</a>
+            <a class="link-seta" href="#como-comprar">Como funciona a compra</a>
+          </div>
+          <ul class="fatos">
+            <li data-texto="quantidade">5 tamanhos</li>
+            <li data-texto="faixa">10 a 80 cm</li>
+            <li data-texto="apartir">a partir de R$ 29,90</li>
+          </ul>
+        </div>
+
+        <div class="medidor">
+          <div class="medidor__cabeca">
+            <h2 id="medidor-titulo">Qual Sarkis cabe no seu espaço?</h2>
+            <p>Arraste para informar a altura livre. Toque num Sarkis para ver os detalhes.</p>
+          </div>
+          <svg class="palco" id="palco" viewBox="0 0 520 342" role="group" aria-labelledby="medidor-titulo"></svg>
+          <div class="medidor__controle">
+            <label for="espaco">Espaço disponível</label>
+            <input type="range" id="espaco" min="5" max="100" step="1" value="40">
+            <output id="espaco-valor" for="espaco">40 cm</output>
+          </div>
+          <div class="medidor__resultado">
+            <p id="resultado-texto" aria-live="polite">Cabe até o <strong>Sarkis Médio</strong>, com 35 cm.</p>
+            <button type="button" class="botao botao--escuro" id="resultado-botao">Adicionar Médio</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao--loja" id="loja" aria-labelledby="loja-titulo">
+      <div class="envelope">
+        <div class="secao__cabeca">
+          <p class="sobretitulo">Tamanhos e preços</p>
+          <h2 id="loja-titulo">Escolha o seu Sarkis</h2>
+          <p>O mesmo Sarkis em cinco escalas. A fita amarela mostra a altura de cada um comparada à do maior.</p>
+        </div>
+        <div class="lista" id="lista-produtos">
+          <noscript><p class="sem-js">Ative o JavaScript para ver os tamanhos e montar o seu pedido.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" id="como-comprar" aria-labelledby="como-titulo">
+      <div class="envelope">
+        <div class="secao__cabeca">
+          <p class="sobretitulo">Como comprar</p>
+          <h2 id="como-titulo">Três passos até o seu Sarkis</h2>
+        </div>
+        <ol class="passos">
+          <li>
+            <h3>Escolha o tamanho</h3>
+            <p>Use o medidor no topo ou compare as medidas na lista. Todo tamanho tem altura e largura informadas.</p>
+          </li>
+          <li>
+            <h3>Monte o carrinho</h3>
+            <p>Adicione um ou vários tamanhos, na quantidade que quiser. O carrinho soma tudo e fica salvo neste navegador.</p>
+          </li>
+          <li>
+            <h3>Finalize pelo WhatsApp</h3>
+            <p>O pedido vai pronto na mensagem, com itens e subtotal. Frete, pagamento e entrega são combinados na conversa.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="secao secao--duvidas" id="duvidas" aria-labelledby="duvidas-titulo">
+      <div class="envelope duvidas__grade">
+        <div class="secao__cabeca">
+          <p class="sobretitulo">Dúvidas</p>
+          <h2 id="duvidas-titulo">Perguntas frequentes</h2>
+        </div>
+        <div class="duvidas">
+          <details>
+            <summary>Como sei qual tamanho escolher?</summary>
+            <p>Use o medidor no topo da página: informe a altura livre do lugar onde o Sarkis vai ficar e a página mostra o maior tamanho que cabe. As medidas de cada tamanho também estão na lista de preços.</p>
+          </details>
+          <details>
+            <summary>Posso comprar tamanhos diferentes no mesmo pedido?</summary>
+            <p>Pode. Adicione quantos tamanhos quiser ao carrinho; eles seguem juntos numa mensagem só quando você finalizar.</p>
+          </details>
+          <details>
+            <summary>Como finalizo a compra?</summary>
+            <p>Abra o carrinho e toque em “Finalizar pelo WhatsApp”. A conversa já abre com os itens, as quantidades e o subtotal escritos. É só enviar.</p>
+          </details>
+          <details>
+            <summary>Quanto custa o frete?</summary>
+            <p>O frete depende do seu CEP e do tamanho escolhido, por isso é informado na conversa do WhatsApp, antes de você pagar.</p>
+          </details>
+          <details>
+            <summary>Se eu fechar a página, perco o carrinho?</summary>
+            <p>Não. O carrinho fica salvo neste navegador e continua lá quando você voltar.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="chamada" aria-labelledby="chamada-titulo">
+      <div class="envelope chamada__interno">
+        <h2 id="chamada-titulo">Já sabe o seu tamanho?</h2>
+        <a class="botao botao--sobre-fita" href="#loja">Escolher meu Sarkis</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape" id="rodape">
+    <div class="envelope rodape__interno">
+      <span class="logo">Sarkis</span>
+      <p>© <span id="ano">2026</span> Sarkis. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <div class="veu" id="veu"></div>
+  <aside class="gaveta" id="carrinho" role="dialog" aria-modal="true" aria-labelledby="carrinho-titulo">
+    <div class="gaveta__cabeca">
+      <h2 id="carrinho-titulo">Seu carrinho</h2>
+      <button type="button" class="botao-icone" id="fechar-carrinho" aria-label="Fechar carrinho">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="gaveta__itens" id="itens-carrinho"></div>
+    <div class="gaveta__rodape" id="rodape-carrinho">
+      <dl class="totais">
+        <div><dt>Subtotal</dt><dd id="subtotal">R$ 0,00</dd></div>
+        <div class="totais__frete"><dt>Frete</dt><dd>Combinado no WhatsApp</dd></div>
+      </dl>
+      <a class="botao botao--escuro botao--largo" id="finalizar" href="https://wa.me/" target="_blank" rel="noopener">Finalizar pelo WhatsApp</a>
+      <button type="button" class="botao-texto" id="continuar">Continuar comprando</button>
+    </div>
+  </aside>
+
+  <div class="aviso" id="aviso">
+    <span id="aviso-texto"></span>
+    <button type="button" id="aviso-ver">Ver carrinho</button>
+  </div>
+  <p class="sr" id="anuncio" role="status" aria-live="polite"></p>
+</body>
+</html>
